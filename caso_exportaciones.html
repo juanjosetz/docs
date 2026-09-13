@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Juan José Triviño Zambrano">
+
+<title>Caso de Estudio</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="caso_exportaciones_files/libs/clipboard/clipboard.min.js"></script>
+<script src="caso_exportaciones_files/libs/quarto-html/quarto.js"></script>
+<script src="caso_exportaciones_files/libs/quarto-html/popper.min.js"></script>
+<script src="caso_exportaciones_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="caso_exportaciones_files/libs/quarto-html/anchor.min.js"></script>
+<link href="caso_exportaciones_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="caso_exportaciones_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="caso_exportaciones_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="caso_exportaciones_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="caso_exportaciones_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<style>
+    .quarto-title-block .quarto-title-banner {
+      background-image: url(imgs/logopuce.png);
+background-size: cover;
+    }
+    </style>
+<script src="caso_exportaciones_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script src="caso_exportaciones_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link href="caso_exportaciones_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+</head>
+
+<body>
+
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Caso de Estudio</h1>
+            <p class="subtitle lead">Predicción del crecimiento de las exportaciones de productos en el Top 5 histórico a Estados Unidos utilizando Machine Learning</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autor/a</div>
+      <div class="quarto-title-meta-contents">
+               <p>Juan José Triviño Zambrano </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Fecha de publicación</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">5 de abril de 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="toc-section-number">1</span>  Introducción</a></li>
+  <li><a href="#objetivos" id="toc-objetivos" class="nav-link" data-scroll-target="#objetivos"><span class="toc-section-number">2</span>  Objetivos</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-general" id="toc-objetivo-general" class="nav-link" data-scroll-target="#objetivo-general"><span class="toc-section-number">2.1</span>  Objetivo General</a></li>
+  <li><a href="#objetivos-específicos" id="toc-objetivos-específicos" class="nav-link" data-scroll-target="#objetivos-específicos"><span class="toc-section-number">2.2</span>  Objetivos Específicos</a></li>
+  </ul></li>
+  <li><a href="#alcance" id="toc-alcance" class="nav-link" data-scroll-target="#alcance"><span class="toc-section-number">3</span>  Alcance</a></li>
+  <li><a href="#metodologia" id="toc-metodologia" class="nav-link" data-scroll-target="#metodologia"><span class="toc-section-number">4</span>  Metodologia</a></li>
+  <li><a href="#recolección-de-datos" id="toc-recolección-de-datos" class="nav-link" data-scroll-target="#recolección-de-datos"><span class="toc-section-number">5</span>  Recolección de datos</a></li>
+  <li><a href="#preparación-de-datos" id="toc-preparación-de-datos" class="nav-link" data-scroll-target="#preparación-de-datos"><span class="toc-section-number">6</span>  Preparación de datos</a>
+  <ul class="collapse">
+  <li><a href="#limpieza" id="toc-limpieza" class="nav-link" data-scroll-target="#limpieza"><span class="toc-section-number">6.1</span>  Limpieza</a></li>
+  <li><a href="#selección-de-características" id="toc-selección-de-características" class="nav-link" data-scroll-target="#selección-de-características"><span class="toc-section-number">6.2</span>  Selección de características</a></li>
+  <li><a href="#tipos-de-datos" id="toc-tipos-de-datos" class="nav-link" data-scroll-target="#tipos-de-datos"><span class="toc-section-number">6.3</span>  Tipos de datos</a></li>
+  <li><a href="#transformación-de-datos" id="toc-transformación-de-datos" class="nav-link" data-scroll-target="#transformación-de-datos"><span class="toc-section-number">6.4</span>  Transformación de datos</a>
+  <ul class="collapse">
+  <li><a href="#creando-la-variable-precio" id="toc-creando-la-variable-precio" class="nav-link" data-scroll-target="#creando-la-variable-precio">Creando la variable <code>Precio</code></a></li>
+  <li><a href="#creando-la-variable-fecha" id="toc-creando-la-variable-fecha" class="nav-link" data-scroll-target="#creando-la-variable-fecha">Creando la variable <code>Fecha</code></a></li>
+  </ul></li>
+  <li><a href="#identificación-del-top-5-histórico-de-productos" id="toc-identificación-del-top-5-histórico-de-productos" class="nav-link" data-scroll-target="#identificación-del-top-5-histórico-de-productos"><span class="toc-section-number">6.5</span>  Identificación del TOP 5 histórico de productos</a></li>
+  <li><a href="#agrupando-por-una-escala-temporal" id="toc-agrupando-por-una-escala-temporal" class="nav-link" data-scroll-target="#agrupando-por-una-escala-temporal"><span class="toc-section-number">6.6</span>  Agrupando por una escala temporal</a></li>
+  </ul></li>
+  <li><a href="#análisis-exploratorio-de-datos" id="toc-análisis-exploratorio-de-datos" class="nav-link" data-scroll-target="#análisis-exploratorio-de-datos"><span class="toc-section-number">7</span>  Análisis exploratorio de datos</a></li>
+  <li><a href="#selección-del-modelo" id="toc-selección-del-modelo" class="nav-link" data-scroll-target="#selección-del-modelo"><span class="toc-section-number">8</span>  Selección del modelo</a>
+  <ul class="collapse">
+  <li><a href="#el-modelo-prophet" id="toc-el-modelo-prophet" class="nav-link" data-scroll-target="#el-modelo-prophet"><span class="toc-section-number">8.1</span>  El Modelo Prophet</a></li>
+  <li><a href="#entrenamiento-y-validación-del-modelo" id="toc-entrenamiento-y-validación-del-modelo" class="nav-link" data-scroll-target="#entrenamiento-y-validación-del-modelo"><span class="toc-section-number">8.2</span>  Entrenamiento y validación del modelo</a></li>
+  </ul></li>
+  <li><a href="#resultados-y-comunicación" id="toc-resultados-y-comunicación" class="nav-link" data-scroll-target="#resultados-y-comunicación"><span class="toc-section-number">9</span>  Resultados y comunicación</a></li>
+  <li><a href="#afinamiento-de-hiperparámetros" id="toc-afinamiento-de-hiperparámetros" class="nav-link" data-scroll-target="#afinamiento-de-hiperparámetros"><span class="toc-section-number">10</span>  Afinamiento de hiperparámetros</a>
+  <ul class="collapse">
+  <li><a href="#incorporación-del-regresor-precio-y-ajuste-de-la-frecuencia-de-los-datos" id="toc-incorporación-del-regresor-precio-y-ajuste-de-la-frecuencia-de-los-datos" class="nav-link" data-scroll-target="#incorporación-del-regresor-precio-y-ajuste-de-la-frecuencia-de-los-datos"><span class="toc-section-number">10.1</span>  Incorporación del regresor <code>precio</code> y ajuste de la frecuencia de los datos</a></li>
+  </ul></li>
+  <li><a href="#conclusiones" id="toc-conclusiones" class="nav-link" data-scroll-target="#conclusiones"><span class="toc-section-number">11</span>  Conclusiones</a></li>
+  <li><a href="#recomendaciones" id="toc-recomendaciones" class="nav-link" data-scroll-target="#recomendaciones"><span class="toc-section-number">12</span>  Recomendaciones</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="toc-section-number">13</span>  Referencias</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="introducción" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introducción</h1>
+<p>El presente estudio trata el desarrollo de un modelo predictivo que permita estimar el volumen de exportaciones del Top 5 de productos en un horizonte de 12 meses, mediante el uso de técnica/s de Machine Learning analizando datos historicos. Este enfoque busca brindar información valiosa para la toma de decisiones de las autoridades y los actores involucrados en el comercio exterior, permitiendo la identificación de oportunidades y desafíos en el mercado internacional y la formulación de estrategias adecuadas para enfrentarlos.</p>
+</section>
+<section id="objetivos" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Objetivos</h1>
+<section id="objetivo-general" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="objetivo-general"><span class="header-section-number">2.1</span> Objetivo General</h2>
+<p>Desarrollar un modelo predictivo basado en Machine Learning para estimar el crecimiento o decrecimiento del volumen de exportaciones del Top 5 histórico de productos más exportados desde Ecuador a Estados Unidos en el siguiente año.</p>
+</section>
+<section id="objetivos-específicos" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="objetivos-específicos"><span class="header-section-number">2.2</span> Objetivos Específicos</h2>
+<ul>
+<li>Realizar un análisis exploratorio de la base de datos proporcionada por el MPCEIP para comprender las características de las exportaciones y sus cambios a lo largo de los años, identificando patrones y tendencias relevantes en el Top 5 histórico de productos más exportados.</li>
+<li>Preprocesar y preparar los datos para su uso en el desarrollo del modelo predictivo, llevando a cabo tareas de limpieza, transformación y selección de variables relevantes.</li>
+<li>Crear un modelo con técnicas de Machine Learning que permita predecir el crecimiento o decrecimiento del volumen en toneladas de las exportaciones del Top 5 histórico de productos exportados a Estados Unidos.</li>
+<li>Definir un método o técnica conveniente que permita realizar las predicciones con los datos y variables provistos.</li>
+</ul>
+</section>
+</section>
+<section id="alcance" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Alcance</h1>
+<p>El presente estudio se enfoca en analizar y predecir el crecimiento o decrecimiento del volumen de exportaciones del Top 5 histórico de productos más exportados desde Ecuador a Estados Unidos, utilizando los datos proporcionados por el Ministerio de Producción, Comercio Exterior, Inversiones y Pesca (MPCEIP) desde el año 2001 hasta la fecha de corte de conocimiento en 2021. El alcance del estudio abarca los siguientes aspectos:</p>
+<ol type="1">
+<li><p>La investigación se limita al análisis de las exportaciones de los cinco productos principales en términos de cantidad exportada (en toneladas), sin considerar otros productos o variables económicas adicionales que puedan influir en el comercio exterior.</p></li>
+<li><p>Se analizarán exclusivamente las exportaciones realizadas desde Ecuador hacia Estados Unidos, sin incluir otros destinos o relaciones comerciales internacionales.</p></li>
+<li><p>El modelo predictivo desarrollado tiene como objetivo estimar el volumen de exportaciones del Top 5 histórico de productos para el siguiente año, no abordando predicciones a largo plazo o tendencias futuras más allá de ese periodo.</p></li>
+<li><p>El estudio no pretende ofrecer un análisis exhaustivo de las causas o factores que influyen en el crecimiento o decrecimiento de las exportaciones, sino que se centra en la aplicación de técnicas de Machine Learning para predecir el comportamiento de las exportaciones en base a los datos históricos disponibles.</p></li>
+<li><p>Las conclusiones y recomendaciones derivadas del estudio estarán enfocadas en la toma de decisiones relacionadas con la producción, inversión y estrategias comerciales en el contexto del comercio exterior entre Ecuador y Estados Unidos, sin entrar en detalles específicos de políticas gubernamentales o acciones a nivel empresarial.</p></li>
+</ol>
+</section>
+<section id="metodologia" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Metodologia</h1>
+<p>El presente estudio seguirá un enfoque estructurado basado en los pasos del aprendizaje automático, que se integran con las fases CRISP-DM (ver <a href="#fig-crispdm">Figura&nbsp;1</a>), para desarrollar un modelo predictivo del crecimiento o decrecimiento del volumen de exportaciones del Top 5 histórico de productos más exportados desde Ecuador a Estados Unidos. A continuación, se detallan las etapas del proceso las cuales se integran y las herramientas que se utilizarán en cada paso:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
+  A[Recolección] --&gt; B[Preparación] --&gt; C[Selección] --&gt; D[Entrenamiento] --&gt; E[Evaluación] --&gt; F[Afinamiento]--&gt; G[Predicción]
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<div id="fig-crispdm" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="/imgs/crispdm.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figura&nbsp;1: Tareas genéricas y resultados del modelo de referencia CRISP-DM <span class="citation" data-cites="chapman2000crisp">(<a href="#ref-chapman2000crisp" role="doc-biblioref">Chapman 2000</a>)</span></figcaption><p></p>
+</figure>
+</div>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carga de librerias y ajustes</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.tsa.seasonal <span class="im">import</span> seasonal_decompose</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> prophet <span class="im">import</span> Prophet</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_absolute_error, mean_squared_error, r2_score</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>pd.options.display.float_format <span class="op">=</span> <span class="st">'{:,.2f}'</span>.<span class="bu">format</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="recolección-de-datos" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Recolección de datos</h1>
+<p>Los datos históricos de exportación serán obtenidos de la base de datos proporcionada por el Ministerio de Producción, Comercio Exterior, Inversiones y Pesca (MPCEIP), disponible en formato CSV <a href="https://www.datosabiertos.gob.ec/dataset/exportaciones-a-estados-unidos-de-america/resource/0335c16b-6320-45c9-8409-75890e38537c">en la página de datos abiertos.</a></p>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carga de datos</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"mpceip_exportaciones-eeuu_2021_11.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 109720 entries, 0 to 109719
+Data columns (total 13 columns):
+ #   Column                        Non-Null Count   Dtype  
+---  ------                        --------------   -----  
+ 0   Año                           109720 non-null  object 
+ 1   Mes                           103503 non-null  float64
+ 2   País Destino                  103503 non-null  object 
+ 3   Capítulo                      103503 non-null  float64
+ 4   4D                            103503 non-null  float64
+ 5   Producto Principal (Nivel 4)  103503 non-null  object 
+ 6   6D                            103503 non-null  float64
+ 7   8D                            103503 non-null  float64
+ 8   Tradicional/No tradicional    103503 non-null  object 
+ 9   No Petrolero/Petrolero        103503 non-null  object 
+ 10  Código Subpartida             103503 non-null  float64
+ 11  Export FOB (miles)            103503 non-null  float64
+ 12  Toneladas                     103503 non-null  float64
+dtypes: float64(8), object(5)
+memory usage: 10.9+ MB</code></pre>
+</div>
+</div>
+</section>
+<section id="preparación-de-datos" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Preparación de datos</h1>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="3">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Año</th>
+      <th>Mes</th>
+      <th>País Destino</th>
+      <th>Capítulo</th>
+      <th>4D</th>
+      <th>Producto Principal (Nivel 4)</th>
+      <th>6D</th>
+      <th>8D</th>
+      <th>Tradicional/No tradicional</th>
+      <th>No Petrolero/Petrolero</th>
+      <th>Código Subpartida</th>
+      <th>Export FOB (miles)</th>
+      <th>Toneladas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021</td>
+      <td>1.00</td>
+      <td>ESTADOS UNIDOS</td>
+      <td>1.00</td>
+      <td>101.00</td>
+      <td>Animales Vivos No Para Alimentación</td>
+      <td>10,129.00</td>
+      <td>1,012,990.00</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>101,299,000.00</td>
+      <td>1.50</td>
+      <td>0.43</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021</td>
+      <td>1.00</td>
+      <td>ESTADOS UNIDOS</td>
+      <td>1.00</td>
+      <td>106.00</td>
+      <td>Animales Vivos No Para Alimentación</td>
+      <td>10,620.00</td>
+      <td>1,062,000.00</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>106,200,000.00</td>
+      <td>120.00</td>
+      <td>14.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021,01,ESTADOS UNIDOS,02,0208,"Carne, Leche Y...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021,01,ESTADOS UNIDOS,02,0208,"Carne, Leche Y...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021</td>
+      <td>1.00</td>
+      <td>ESTADOS UNIDOS</td>
+      <td>3.00</td>
+      <td>301.00</td>
+      <td>Animales Vivos No Para Alimentación</td>
+      <td>30,199.00</td>
+      <td>3,019,919.00</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>301,991,990.00</td>
+      <td>23.67</td>
+      <td>1.80</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">2</span>,<span class="dv">0</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>'2021,01,ESTADOS UNIDOS,02,0208,"Carne, Leche Y Elaborados",020810,02081000,NO TRADICIONAL,No Petrolero,0208100000,0.21,0.3'</code></pre>
+</div>
+</div>
+<section id="limpieza" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="limpieza"><span class="header-section-number">6.1</span> Limpieza</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El problema en la tercera y cuarta línea del dataframe es que los datos están mal formateados y no siguen la estructura de las demás filas. Parece que todos los valores en estas dos filas están concatenados en una sola cadena de texto en la columna “Año”, en lugar de estar distribuidos en sus respectivas columnas.</p>
+</div>
+</div>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificando el problema a nivel global</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df[df[<span class="st">'Mes'</span>].isna()].shape</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>(6217, 13)</code></pre>
+</div>
+</div>
+<p>El problema se repite a lo largo del dataset, es necesario resolver esta problematica de manera sistematica. Una solución es utilizar una expresión regular para hacer una división inteligente de la cadena de texto. Para esto implementamos la funcion <code>corregir_fila_mal_formateada</code> en donde:</p>
+<ul>
+<li>La función <code>re.split()</code> divide la cadena en función de las comas, pero ignoramos las comas que se encuentran dentro de las comillas dobles.</li>
+<li>Luego, utilizamos una comprensión de lista y la función <code>re.sub()</code> para eliminar las comillas dobles de cada elemento en la lista componentes. La expresión regular <code>r'^"|"$' en re.sub()</code> coincide con las comillas dobles al principio <strong>(^“)</strong> o al final <strong>(“$)</strong> de una cadena.</li>
+<li>Finalmente, iteramos a través de las filas del dataframe y verificamos si cada fila está mal formateada (por ejemplo, si el valor en la columna ‘Mes’ es NaN). Si es así, aplicamos la función <code>corregir_fila_mal_formateada()</code> y reemplazamos la correccion realizada por la fila mal formateada.</li>
+</ul>
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> corregir_fila_mal_formateada(fila_mal_formateada):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dividir la fila mal formateada en sus componentes utilizando una expresión regular</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    componentes <span class="op">=</span> re.split(<span class="vs">r',\s*(?=(?:[^"]*"[^"]*")*[^"]*$)'</span>, fila_mal_formateada)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    componentes <span class="op">=</span> [re.sub(<span class="vs">r'^"|"$'</span>, <span class="st">''</span>, componente) <span class="cf">for</span> componente <span class="kw">in</span> componentes]</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> componentes</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, fila <span class="kw">in</span> df.iterrows():</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isna(fila[<span class="st">'Mes'</span>]):</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        fila_corregida <span class="op">=</span> corregir_fila_mal_formateada(fila[<span class="st">'Año'</span>])</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        df.iloc[idx] <span class="op">=</span> fila_corregida</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Verificamos si el problema fue solventado de manera correcta y vemos que los valores ahora estan en los campos correctos</p>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="7">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Año</th>
+      <th>Mes</th>
+      <th>País Destino</th>
+      <th>Capítulo</th>
+      <th>4D</th>
+      <th>Producto Principal (Nivel 4)</th>
+      <th>6D</th>
+      <th>8D</th>
+      <th>Tradicional/No tradicional</th>
+      <th>No Petrolero/Petrolero</th>
+      <th>Código Subpartida</th>
+      <th>Export FOB (miles)</th>
+      <th>Toneladas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021</td>
+      <td>1.00</td>
+      <td>ESTADOS UNIDOS</td>
+      <td>1.00</td>
+      <td>101.00</td>
+      <td>Animales Vivos No Para Alimentación</td>
+      <td>10,129.00</td>
+      <td>1,012,990.00</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>101,299,000.00</td>
+      <td>1.50</td>
+      <td>0.43</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021</td>
+      <td>1.00</td>
+      <td>ESTADOS UNIDOS</td>
+      <td>1.00</td>
+      <td>106.00</td>
+      <td>Animales Vivos No Para Alimentación</td>
+      <td>10,620.00</td>
+      <td>1,062,000.00</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>106,200,000.00</td>
+      <td>120.00</td>
+      <td>14.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021</td>
+      <td>01</td>
+      <td>ESTADOS UNIDOS</td>
+      <td>02</td>
+      <td>0208</td>
+      <td>Carne, Leche Y Elaborados</td>
+      <td>020810</td>
+      <td>02081000</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>0208100000</td>
+      <td>0.21</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021</td>
+      <td>01</td>
+      <td>ESTADOS UNIDOS</td>
+      <td>02</td>
+      <td>0208</td>
+      <td>Carne, Leche Y Elaborados</td>
+      <td>020890</td>
+      <td>02089000</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>0208900000</td>
+      <td>4.675</td>
+      <td>0.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021</td>
+      <td>1.00</td>
+      <td>ESTADOS UNIDOS</td>
+      <td>3.00</td>
+      <td>301.00</td>
+      <td>Animales Vivos No Para Alimentación</td>
+      <td>30,199.00</td>
+      <td>3,019,919.00</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>301,991,990.00</td>
+      <td>23.67</td>
+      <td>1.80</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="8">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df[df[<span class="st">'Mes'</span>].isna()].shape</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>(0, 13)</code></pre>
+</div>
+</div>
+</section>
+<section id="selección-de-características" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="selección-de-características"><span class="header-section-number">6.2</span> Selección de características</h2>
+<p>En esta parte se eliminan las columnas que son irrelevantes o redundantes, para el problema. Para esto seleccionamos solamente las caracteristicas que vamos a utilizar para construir el modelo. Incorporar variables adicionales al modelo predictivo puede mejorar su capacidad para hacer predicciones precisas y capturar la dinámica subyacente de los datos. Dado el conjunto de datos estan son las variables que podrían ser útiles en el modelo:</p>
+<ul>
+<li><p><strong>Producto Principal (Nivel 4)</strong>: Esta variable categórica proporciona información sobre los diferentes productos exportados. Incluir esta variable en tu modelo puede ayudar a capturar la variación en el volumen de exportaciones (toneladas) para diferentes productos a lo largo del tiempo.</p></li>
+<li><p><strong>Tradicional/No tradicional</strong>: Esta variable categórica indica si un producto es tradicional o no tradicional en términos de exportaciones. Al incluir esta variable en el modelo, podrías capturar diferencias en la evolución de las exportaciones de productos tradicionales y no tradicionales.</p></li>
+<li><p><strong>No Petrolero/Petrolero</strong>: Esta variable categórica distingue entre productos petroleros y no petroleros. Al incorporar esta variable en el modelo, podrías capturar diferencias en el comportamiento de las exportaciones de productos petroleros y no petroleros.</p></li>
+<li><p><strong>Fecha (año y mes)</strong>: La estructura de tiempo es fundamental para capturar la evolución de las exportaciones a lo largo del tiempo y predecir con precisión.</p></li>
+<li><p><strong>Toneladas</strong>: Esta variable representa el volumen de las exportaciones en términos de toneladas. Es la variable objetivo que se pronosticara pra el siguiente año.</p></li>
+<li><p><strong>Precio</strong>: No es un campo que viene de manera explicita en el dataset pero se lo puede calcular de manera implicita dividiendo <code>Export FOB (miles)</code> por la columna <code>Toneladas</code>. El precio puede ser un factor importante en un modelo de predicción de exportaciones, ya que puede influir en la cantidad de bienes que se exportan. Por ejemplo, si el precio de un producto aumenta, podría haber una disminución en la demanda y, por lo tanto, en la cantidad exportada. Por otro lado, si el precio disminuye, podría haber un aumento en la demanda y en las exportaciones.</p></li>
+</ul>
+</section>
+<section id="tipos-de-datos" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="tipos-de-datos"><span class="header-section-number">6.3</span> Tipos de datos</h2>
+<div class="cell" data-execution_count="9">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 109720 entries, 0 to 109719
+Data columns (total 13 columns):
+ #   Column                        Non-Null Count   Dtype 
+---  ------                        --------------   ----- 
+ 0   Año                           109720 non-null  object
+ 1   Mes                           109720 non-null  object
+ 2   País Destino                  109720 non-null  object
+ 3   Capítulo                      109720 non-null  object
+ 4   4D                            109720 non-null  object
+ 5   Producto Principal (Nivel 4)  109720 non-null  object
+ 6   6D                            109720 non-null  object
+ 7   8D                            109720 non-null  object
+ 8   Tradicional/No tradicional    109720 non-null  object
+ 9   No Petrolero/Petrolero        109720 non-null  object
+ 10  Código Subpartida             109720 non-null  object
+ 11  Export FOB (miles)            109720 non-null  object
+ 12  Toneladas                     109720 non-null  object
+dtypes: object(13)
+memory usage: 10.9+ MB</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="10">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>tipos_de_datos <span class="op">=</span> {col:tipo <span class="cf">for</span> col, tipo <span class="kw">in</span> <span class="bu">zip</span>(df.columns[[<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">11</span>,<span class="dv">12</span>]], [<span class="bu">int</span>, <span class="bu">int</span>, <span class="bu">str</span>, <span class="bu">str</span>, <span class="bu">str</span>, <span class="bu">float</span>, <span class="bu">float</span>])}</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.astype(tipos_de_datos)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 109720 entries, 0 to 109719
+Data columns (total 13 columns):
+ #   Column                        Non-Null Count   Dtype  
+---  ------                        --------------   -----  
+ 0   Año                           109720 non-null  int32  
+ 1   Mes                           109720 non-null  int32  
+ 2   País Destino                  109720 non-null  object 
+ 3   Capítulo                      109720 non-null  object 
+ 4   4D                            109720 non-null  object 
+ 5   Producto Principal (Nivel 4)  109720 non-null  object 
+ 6   6D                            109720 non-null  object 
+ 7   8D                            109720 non-null  object 
+ 8   Tradicional/No tradicional    109720 non-null  object 
+ 9   No Petrolero/Petrolero        109720 non-null  object 
+ 10  Código Subpartida             109720 non-null  object 
+ 11  Export FOB (miles)            109720 non-null  float64
+ 12  Toneladas                     109720 non-null  float64
+dtypes: float64(2), int32(2), object(9)
+memory usage: 10.0+ MB</code></pre>
+</div>
+</div>
+</section>
+<section id="transformación-de-datos" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="transformación-de-datos"><span class="header-section-number">6.4</span> Transformación de datos</h2>
+<section id="creando-la-variable-precio" class="level3">
+<h3 class="anchored" data-anchor-id="creando-la-variable-precio">Creando la variable <code>Precio</code></h3>
+<div class="cell" data-execution_count="11">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variable precio</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Precio Unitario'</span>] <span class="op">=</span> df[<span class="st">'Export FOB (miles)'</span>] <span class="op">/</span> df[<span class="st">'Toneladas'</span>]</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Seleccion de variables</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[[<span class="st">'Año'</span>, <span class="st">'Mes'</span>, <span class="st">'Producto Principal (Nivel 4)'</span>, <span class="st">'Tradicional/No tradicional'</span>, <span class="st">'No Petrolero/Petrolero'</span>, <span class="st">'Precio Unitario'</span>, <span class="st">'Toneladas'</span>]]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="creando-la-variable-fecha" class="level3">
+<h3 class="anchored" data-anchor-id="creando-la-variable-fecha">Creando la variable <code>Fecha</code></h3>
+<p>Para trabajar en un problema de series temporales, es aconsejable combinar las columnas de ‘Año’ y ‘Mes’ en una única columna de tipo <code>datetime</code> en lugar de mantenerlas por separado. Esto te permitirá aprovechar mejor las funciones de análisis y manipulación de series temporales disponibles en bibliotecas como pandas y facilitará el análisis y la modelización de los datos. <span class="citation" data-cites="atwan2022time">(<a href="#ref-atwan2022time" role="doc-biblioref">Atwan 2022</a>)</span></p>
+<div class="cell" data-execution_count="12">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertir las columnas de 'Año' y 'Mes' en una columna de tipo 'datetime'</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Fecha'</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">'Año'</span>].astype(<span class="bu">str</span>) <span class="op">+</span> <span class="st">'-'</span> <span class="op">+</span> df[<span class="st">'Mes'</span>].astype(<span class="bu">str</span>))</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Eliminar las columnas 'Año' y 'Mes'</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.drop([<span class="st">'Año'</span>, <span class="st">'Mes'</span>], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Establecer 'Fecha' como índice del dataframe si se desea</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.set_index(<span class="st">'Fecha'</span>)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="12">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Producto Principal (Nivel 4)</th>
+      <th>Tradicional/No tradicional</th>
+      <th>No Petrolero/Petrolero</th>
+      <th>Precio Unitario</th>
+      <th>Toneladas</th>
+    </tr>
+    <tr>
+      <th>Fecha</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2021-01-01</th>
+      <td>Animales Vivos No Para Alimentación</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>3.49</td>
+      <td>0.43</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>Animales Vivos No Para Alimentación</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>8.57</td>
+      <td>14.00</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>Carne, Leche Y Elaborados</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>0.70</td>
+      <td>0.30</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>Carne, Leche Y Elaborados</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>5.84</td>
+      <td>0.80</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>Animales Vivos No Para Alimentación</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>13.15</td>
+      <td>1.80</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2001-12-01</th>
+      <td>Otras Mercancías</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>28.37</td>
+      <td>0.22</td>
+    </tr>
+    <tr>
+      <th>2001-12-01</th>
+      <td>Otras Mercancías</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>20.54</td>
+      <td>0.32</td>
+    </tr>
+    <tr>
+      <th>2001-12-01</th>
+      <td>Otras Mercancías</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>10.81</td>
+      <td>1.17</td>
+    </tr>
+    <tr>
+      <th>2001-12-01</th>
+      <td>Artículos De Madera Y Corcho</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>24.58</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>2001-12-01</th>
+      <td>Otras Mercancías</td>
+      <td>NO TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>1.17</td>
+      <td>0.18</td>
+    </tr>
+  </tbody>
+</table>
+<p>109720 rows × 5 columns</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="identificación-del-top-5-histórico-de-productos" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="identificación-del-top-5-histórico-de-productos"><span class="header-section-number">6.5</span> Identificación del TOP 5 histórico de productos</h2>
+<div class="cell" data-execution_count="13">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df.groupby(<span class="st">'Producto Principal (Nivel 4)'</span>)[<span class="st">'Toneladas'</span>].<span class="bu">sum</span>().sort_values(</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    ascending <span class="op">=</span> <span class="va">False</span>)[:<span class="dv">10</span>].plot(</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    kind<span class="op">=</span><span class="st">'bar'</span>, color<span class="op">=</span><span class="st">'salmon'</span>, edgecolor<span class="op">=</span><span class="st">'red'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">6</span>), xlabel<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-top" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="caso_exportaciones_files/figure-html/fig-top-output-1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figura&nbsp;2: Productos más exportados en el período 2001-2021</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="14">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrar el dataset para incluir solo el Top 5 histórico de productos</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>top_5_productos <span class="op">=</span> df.groupby(<span class="st">'Producto Principal (Nivel 4)'</span>)[<span class="st">'Toneladas'</span>].<span class="bu">sum</span>().sort_values(ascending <span class="op">=</span> <span class="va">False</span>)[:<span class="dv">5</span>].index</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>pd.Series(top_5_productos, index<span class="op">=</span><span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">6</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>1           Petróleo Crudo
+2                   Banano
+3    Derivados De Petróleo
+4                  Plátano
+5                Camarones
+Name: Producto Principal (Nivel 4), dtype: object</code></pre>
+</div>
+</div>
+</section>
+<section id="agrupando-por-una-escala-temporal" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="agrupando-por-una-escala-temporal"><span class="header-section-number">6.6</span> Agrupando por una escala temporal</h2>
+<p>Se tiene <strong>109720 registros</strong> en el conjunto de datos que cubren el período de 2001 a 2002, estamos lidiando con una gran cantidad de detalles y transacciones individuales. Para facilitar el análisis de las tendencias a lo largo del tiempo, es mejor considerar la posibilidad de agrupar y agregar los datos.</p>
+<p>Al agrupar por mes, se podrá analizar las tendencias y patrones en las exportaciones de productos en una escala temporal más granular <span class="citation" data-cites="hyndman2018forecasting">(<a href="#ref-hyndman2018forecasting" role="doc-biblioref">Hyndman y Athanasopoulos 2018</a>)</span>. Esto puede ser útil para identificar patrones estacionales, detectar cambios repentinos en las exportaciones o identificar periodos de crecimiento o disminución en las exportaciones de productos específicos.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La volatilidad en los datos es alta, ya que las fluctuaciones de las observaciones son más pronunciadas que las tendencias a largo plazo, esto dificulta la identificación de patrones claros en los datos, también se puede probar una escala temporal diferente, como trimestral o anual, tal como se observa en la <a href="#fig-escalas">Figura&nbsp;3</a>, para suavizar la variabilidad a corto plazo y centrarnos en las tendencias generales.</p>
+</div>
+</div>
+<div class="cell" data-execution_count="15">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrar el DataFrame original para mantener solo los 5 productos principales</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>df_top_5 <span class="op">=</span> df[df[<span class="st">'Producto Principal (Nivel 4)'</span>].isin(top_5_productos)]</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula el número total de observaciones para cada producto</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>total_observaciones <span class="op">=</span> df_top_5.groupby(<span class="st">'Producto Principal (Nivel 4)'</span>).size()</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular el el número total de observaciones por mes para cada producto</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>observaciones_mensuales <span class="op">=</span> df.reset_index().groupby(</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    [pd.Grouper(key<span class="op">=</span><span class="st">'Fecha'</span>, freq<span class="op">=</span><span class="st">'M'</span>), <span class="st">'Producto Principal (Nivel 4)'</span>]).<span class="bu">sum</span>().reset_index().groupby(</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Producto Principal (Nivel 4)'</span>).size().loc[top_5_productos]</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular el el número total de observaciones por trimstre para cada producto</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>observaciones_trimestrales <span class="op">=</span> df.reset_index().groupby(</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    [pd.Grouper(key<span class="op">=</span><span class="st">'Fecha'</span>, freq<span class="op">=</span><span class="st">'Q'</span>), <span class="st">'Producto Principal (Nivel 4)'</span>]).<span class="bu">sum</span>().reset_index().groupby(</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Producto Principal (Nivel 4)'</span>).size().loc[top_5_productos]</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>observaciones <span class="op">=</span> pd.concat([total_observaciones, observaciones_mensuales, observaciones_trimestrales], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>observaciones.columns <span class="op">=</span> [<span class="st">'Totales'</span>, <span class="st">'Mensuales'</span>, <span class="st">'Trimestrales'</span>]</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>observaciones</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="15">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Totales</th>
+      <th>Mensuales</th>
+      <th>Trimestrales</th>
+    </tr>
+    <tr>
+      <th>Producto Principal (Nivel 4)</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Banano</th>
+      <td>680</td>
+      <td>249</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <th>Camarones</th>
+      <td>1245</td>
+      <td>249</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <th>Derivados De Petróleo</th>
+      <td>348</td>
+      <td>200</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <th>Petróleo Crudo</th>
+      <td>249</td>
+      <td>249</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <th>Plátano</th>
+      <td>254</td>
+      <td>249</td>
+      <td>83</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-jp-markdownheadingcollapsed="true" data-tags="[]" data-execution_count="16">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sin agrupar</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>sin_agrupar <span class="op">=</span> df[(df[<span class="st">'Producto Principal (Nivel 4)'</span>] <span class="op">==</span> <span class="st">'Banano'</span>)][<span class="st">'Toneladas'</span>]</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Agrupación mensual</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>agrupacion_mensual <span class="op">=</span> (df[(df[<span class="st">'Producto Principal (Nivel 4)'</span>] <span class="op">==</span> <span class="st">'Banano'</span>)]</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>                      .resample(<span class="st">'M'</span>)[<span class="st">'Toneladas'</span>].<span class="bu">sum</span>())</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Agrupación trimestral</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>agrupacion_trimestral <span class="op">=</span> (df[(df[<span class="st">'Producto Principal (Nivel 4)'</span>] <span class="op">==</span> <span class="st">'Banano'</span>)]</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>                         .resample(<span class="st">'Q'</span>)[<span class="st">'Toneladas'</span>].<span class="bu">sum</span>())</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Creación de subgráficos</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">5</span>), sharey<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Sin agrupar</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].plot(sin_agrupar)</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_title(<span class="st">'Sin agrupar'</span>)</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">'Fecha'</span>)</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Agrupación mensual</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].plot(agrupacion_mensual)</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_title(<span class="st">'Agrupación mensual'</span>)</span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_xlabel(<span class="st">'Fecha'</span>)</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Agrupación trimestral</span></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].plot(agrupacion_trimestral)</span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].set_title(<span class="st">'Agrupación trimestral'</span>)</span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">2</span>].set_xlabel(<span class="st">'Fecha'</span>)</span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajuste de espaciado y visualización</span></span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-escalas" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="caso_exportaciones_files/figure-html/fig-escalas-output-1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figura&nbsp;3: Diferentes escalas en una serie de tiempo</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="17">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df_agrupado <span class="op">=</span> df.reset_index().groupby([pd.Grouper(key<span class="op">=</span><span class="st">'Fecha'</span>, freq<span class="op">=</span><span class="st">'M'</span>), <span class="st">'Producto Principal (Nivel 4)'</span>, <span class="st">'Tradicional/No tradicional'</span>, <span class="st">'No Petrolero/Petrolero'</span>]).<span class="bu">sum</span>().reset_index(level<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>])</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>dfm <span class="op">=</span> df_agrupado[df_agrupado[<span class="st">'Producto Principal (Nivel 4)'</span>].isin(top_5_productos)]</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>dfm<span class="co">#df.index = df.index.to_period('M')</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="17">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Producto Principal (Nivel 4)</th>
+      <th>Tradicional/No tradicional</th>
+      <th>No Petrolero/Petrolero</th>
+      <th>Precio Unitario</th>
+      <th>Toneladas</th>
+    </tr>
+    <tr>
+      <th>Fecha</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2001-01-31</th>
+      <td>Banano</td>
+      <td>TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>0.64</td>
+      <td>90,784.18</td>
+    </tr>
+    <tr>
+      <th>2001-01-31</th>
+      <td>Camarones</td>
+      <td>TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>31.75</td>
+      <td>1,517.49</td>
+    </tr>
+    <tr>
+      <th>2001-01-31</th>
+      <td>Derivados De Petróleo</td>
+      <td>NO TRADICIONAL</td>
+      <td>Petrolero</td>
+      <td>132.59</td>
+      <td>39,070.00</td>
+    </tr>
+    <tr>
+      <th>2001-01-31</th>
+      <td>Petróleo Crudo</td>
+      <td>TRADICIONAL</td>
+      <td>Petrolero</td>
+      <td>0.13</td>
+      <td>401,801.40</td>
+    </tr>
+    <tr>
+      <th>2001-01-31</th>
+      <td>Plátano</td>
+      <td>TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>0.22</td>
+      <td>5,936.01</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2021-09-30</th>
+      <td>Banano</td>
+      <td>TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>2.06</td>
+      <td>34,891.55</td>
+    </tr>
+    <tr>
+      <th>2021-09-30</th>
+      <td>Camarones</td>
+      <td>TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>99.09</td>
+      <td>12,783.36</td>
+    </tr>
+    <tr>
+      <th>2021-09-30</th>
+      <td>Derivados De Petróleo</td>
+      <td>NO TRADICIONAL</td>
+      <td>Petrolero</td>
+      <td>72.65</td>
+      <td>141,861.01</td>
+    </tr>
+    <tr>
+      <th>2021-09-30</th>
+      <td>Petróleo Crudo</td>
+      <td>TRADICIONAL</td>
+      <td>Petrolero</td>
+      <td>0.48</td>
+      <td>262,000.58</td>
+    </tr>
+    <tr>
+      <th>2021-09-30</th>
+      <td>Plátano</td>
+      <td>TRADICIONAL</td>
+      <td>No Petrolero</td>
+      <td>0.53</td>
+      <td>9,584.57</td>
+    </tr>
+  </tbody>
+</table>
+<p>1199 rows × 5 columns</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="análisis-exploratorio-de-datos" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Análisis exploratorio de datos</h1>
+<div class="cell" data-execution_count="18">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creación de subgráficos</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">5</span>, <span class="dv">4</span>, figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">10</span>))</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, producto <span class="kw">in</span> <span class="bu">enumerate</span>(top_5_productos):</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filtrar el producto y agregar por mes</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    data_producto <span class="op">=</span> (dfm[(dfm[<span class="st">'Producto Principal (Nivel 4)'</span>] <span class="op">==</span> producto)]</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>                     .resample(<span class="st">'M'</span>)[<span class="st">'Toneladas'</span>].<span class="bu">sum</span>())</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Descomposición estacional</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    descomposicion <span class="op">=</span> seasonal_decompose(data_producto, model<span class="op">=</span><span class="st">'additive'</span>)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Graficar descomposición</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">0</span>].plot(data_producto)</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">0</span>].set_title(<span class="ss">f'</span><span class="sc">{</span>producto<span class="sc">}</span><span class="ss"> - Original'</span>)</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">0</span>].set_ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">1</span>].plot(descomposicion.trend)</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">1</span>].set_title(<span class="ss">f'</span><span class="sc">{</span>producto<span class="sc">}</span><span class="ss"> - Tendencia'</span>)</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">1</span>].set_ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">2</span>].plot(descomposicion.seasonal)</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">2</span>].set_title(<span class="ss">f'</span><span class="sc">{</span>producto<span class="sc">}</span><span class="ss"> - Estacionalidad'</span>)</span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">2</span>].set_ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">3</span>].plot(descomposicion.resid)</span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">3</span>].set_title(<span class="ss">f'</span><span class="sc">{</span>producto<span class="sc">}</span><span class="ss"> - Residuos'</span>)</span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">3</span>].set_ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">3</span>].set_xlabel(<span class="st">'Fecha'</span>)</span>
+<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajuste de espaciado y visualización</span></span>
+<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-descompose" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="caso_exportaciones_files/figure-html/fig-descompose-output-1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figura&nbsp;4: Descomposición de componentes</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Recortar un subconjunto de años de un conjunto de datos para capturar la tendencia y estacionalidad de manera más clara puede ser útil en ciertas situaciones, como por ejemplo:</p>
+<dl>
+<dt>Cambio estructural</dt>
+<dd>
+Si ha habido un cambio estructural en la serie de tiempo que ha provocado cambios significativos en la tendencia y la estacionalidad, puede ser útil centrarse en un período más reciente que refleje mejor la situación actual.
+</dd>
+<dt>Datos poco confiables o ruidosos</dt>
+<dd>
+Si los datos en algunos períodos son de baja calidad o contienen mucho ruido, puede ser beneficioso excluir esos períodos para mejorar la calidad de los datos y la precisión de las predicciones.
+</dd>
+<dt>Cambio en las políticas o regulaciones</dt>
+<dd>
+Si hubo cambios significativos en las políticas o regulaciones que afectan la serie de tiempo, puede ser útil centrarse en el período posterior a estos cambios para capturar la tendencia y estacionalidad de manera más precisa.
+</dd>
+</dl>
+<div class="cell" data-execution_count="19">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creación de subgráficos</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># para clarificar la tendencia</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>cortes <span class="op">=</span> [<span class="st">'2015'</span>, <span class="st">'2001'</span>, <span class="st">'2016'</span>, <span class="st">'2001'</span>, <span class="st">'2019'</span>]</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">5</span>, <span class="dv">4</span>, figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">10</span>))</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, producto, corte <span class="kw">in</span> <span class="bu">zip</span>(<span class="bu">range</span>(<span class="dv">5</span>), top_5_productos, cortes):</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filtrar el producto y agregar por mes</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>    data_producto <span class="op">=</span> (dfm[(dfm[<span class="st">'Producto Principal (Nivel 4)'</span>] <span class="op">==</span> producto)]</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>                     .resample(<span class="st">'M'</span>)[<span class="st">'Toneladas'</span>].<span class="bu">sum</span>())[corte:]</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Descomposición estacional</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>    descomposicion <span class="op">=</span> seasonal_decompose(data_producto, model<span class="op">=</span><span class="st">'additive'</span>)</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Graficar descomposición</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">0</span>].plot(data_producto)</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">0</span>].set_title(<span class="ss">f'</span><span class="sc">{</span>producto<span class="sc">}</span><span class="ss"> - Original'</span>)</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">0</span>].set_ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">1</span>].plot(descomposicion.trend)</span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">1</span>].set_title(<span class="ss">f'</span><span class="sc">{</span>producto<span class="sc">}</span><span class="ss"> - Tendencia'</span>)</span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">1</span>].set_ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">2</span>].plot(descomposicion.seasonal)</span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">2</span>].set_title(<span class="ss">f'</span><span class="sc">{</span>producto<span class="sc">}</span><span class="ss"> - Estacionalidad'</span>)</span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">2</span>].set_ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">3</span>].plot(descomposicion.resid)</span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">3</span>].set_title(<span class="ss">f'</span><span class="sc">{</span>producto<span class="sc">}</span><span class="ss"> - Residuos'</span>)</span>
+<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">3</span>].set_ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a>    axs[i, <span class="dv">3</span>].set_xlabel(<span class="st">'Fecha'</span>)</span>
+<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a>    xmin <span class="op">=</span> data_producto.index.<span class="bu">min</span>()</span>
+<span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a>    xmax <span class="op">=</span> data_producto.index.<span class="bu">max</span>()</span>
+<span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-37"><a href="#cb26-37" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajuste de espaciado y visualización</span></span>
+<span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-descompose_cut" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="caso_exportaciones_files/figure-html/fig-descompose_cut-output-1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figura&nbsp;5: Descomposición de componentes cortados</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="selección-del-modelo" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Selección del modelo</h1>
+<p>Dado que se está trabajando con un problema de series de tiempo, un buen punto de partida podría ser utilizar modelos de series de tiempo clásicos como el modelo ARIMA (AutoRegressive Integrated Moving Average) o el modelo SARIMA (Seasonal AutoRegressive Integrated Moving Average), que tiene en cuenta la estacionalidad de los datos.</p>
+<p>Otra opción sería utilizar el modelo Prophet desarrollado por Facebook, que es muy efectivo para tratar datos de series de tiempo con patrones estacionales y tendencias.</p>
+<p>También se puede considerar el uso de modelos de aprendizaje profundo como las redes neuronales recurrentes (RNN), especialmente las unidades de memoria a corto plazo (LSTM) y las redes de memoria de plazo corto (GRU), que son especialmente adecuadas para trabajar con datos secuenciales y series de tiempo.</p>
+<section id="el-modelo-prophet" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="el-modelo-prophet"><span class="header-section-number">8.1</span> El Modelo Prophet</h2>
+<p>Prophet es un marco de código abierto de Meta utilizado para enmarcar y predecir series temporales. Se centra en un modelo aditivo en el cual las tendencias no lineales se ajustan con estacionalidades diarias, semanales y anuales, además de efectos adicionales de días festivos. Prophet es eficiente en el manejo de datos faltantes y cambios en las tendencias, y generalmente maneja bien los valores atípicos. También permite acumular variables exógenas en el modelo. <span class="citation" data-cites="vishwas2020hands">(<a href="#ref-vishwas2020hands" role="doc-biblioref">Vishwas y PATEL 2020</a>)</span></p>
+<p>Prophet utiliza un modelo de serie temporal descomponible: <span class="math display">y(t) = g(t) + s(t) + h(t) + \epsilon_t</span></p>
+<p>Donde:</p>
+<ul>
+<li><strong>y(t)</strong> es la predicción en el tiempo <strong><code>t</code></strong>.</li>
+<li><strong>g(t)</strong> representa la función de tendencia que modela cambios no lineales a lo largo del tiempo.</li>
+<li><strong>s(t)</strong> es la función de estacionalidad que captura patrones periódicos (diarios, semanales y anuales) en los datos.</li>
+<li><strong>h(t)</strong> es la función que modela los efectos de los días festivos o eventos especiales.</li>
+<li><strong><span class="math inline">\epsilon_t</span></strong> es el término de error en el tiempo <strong><code>t</code></strong>.</li>
+</ul>
+<p>A diferencia del modelo ARIMA, Prophet no considera la dependencia temporal de los datos y es más como ajustar una curva a los datos. Aunque esto puede generar una pérdida de información predictiva, el modelo es flexible y puede manejar múltiples períodos estacionales y tendencias cambiantes. Además, es robusto ante valores atípicos y datos faltantes. Para abordar múltiples períodos estacionales, Prophet utiliza la serie de Fourier para modelar varios efectos periódicos. <span class="citation" data-cites="peixeiro2022time">(<a href="#ref-peixeiro2022time" role="doc-biblioref">Peixeiro 2022</a>)</span></p>
+<p><span class="math display">s\left ( t \right ) = \sum_{n=1}^{N}\left ( a_{n}\cos \left ( \frac{2\pi nt}{P} \right ) + b_{n}\sin \left ( \frac{2\pi nt}{P} \right )\right )</span></p>
+</section>
+<section id="entrenamiento-y-validación-del-modelo" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="entrenamiento-y-validación-del-modelo"><span class="header-section-number">8.2</span> Entrenamiento y validación del modelo</h2>
+<p>Cuando se trabaja con series de tiempo, es importante tener en cuenta la naturaleza secuencial de los datos al dividirlos en conjuntos de entrenamiento y prueba. A diferencia de otros tipos de datos, no es adecuado dividir las series de tiempo de forma aleatoria, ya que esto podría romper la secuencia temporal y hacer que el modelo no capte las dependencias temporales adecuadamente.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En lugar de dividir los datos aleatoriamente, se recomienda dividirlos de manera secuencial. Por lo general, esto implica utilizar una parte inicial de la serie de tiempo para el entrenamiento y una parte posterior para la prueba. Esto asegura que el conjunto de entrenamiento contenga todos los datos anteriores al conjunto de prueba, manteniendo la secuencia temporal.</p>
+</div>
+</div>
+<p>Esta forma de dividir los datos garantiza que el conjunto de entrenamiento contenga todos los datos anteriores al conjunto de prueba, preservando la secuencia temporal y evitando que el modelo tenga acceso a información futura durante el entrenamiento.</p>
+<div class="cell" data-execution_count="20">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generar_modelo(producto, frecuencia<span class="op">=</span><span class="st">'M'</span>, inicio<span class="op">=</span><span class="va">None</span>, sizetest<span class="op">=</span><span class="dv">12</span>, periodos<span class="op">=</span><span class="dv">12</span>):</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Crear el dataframe</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    dfa <span class="op">=</span> df.reset_index().groupby([pd.Grouper(key<span class="op">=</span><span class="st">'Fecha'</span>, freq<span class="op">=</span>frecuencia), </span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>                              <span class="st">'Producto Principal (Nivel 4)'</span>, <span class="st">'Tradicional/No tradicional'</span>, <span class="st">'No Petrolero/Petrolero'</span>]).<span class="bu">sum</span>().reset_index(level<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>])</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    df_producto <span class="op">=</span> (dfa[(dfa[<span class="st">'Producto Principal (Nivel 4)'</span>] <span class="op">==</span> producto)]</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>                         .resample(frecuencia)[[<span class="st">'Toneladas'</span>]].<span class="bu">sum</span>())[inicio:].reset_index()</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Renombrando las columnas</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>    df_producto.columns <span class="op">=</span> [<span class="st">'ds'</span>, <span class="st">'y'</span>]</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dividir los datos en entrenamiento y prueba</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>    train_df <span class="op">=</span> df_producto.iloc[:<span class="op">-</span>sizetest]  <span class="co"># Todos los datos excepto los últimos 12 meses</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>    test_df <span class="op">=</span> df_producto.iloc[<span class="op">-</span>sizetest:]   <span class="co"># Los últimos 12 meses</span></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Entrenar el modelo Prophet con los datos de entrenamiento</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> Prophet(seasonality_prior_scale<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>    model.fit(train_df)</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Realizar predicciones para el período de prueba</span></span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>    future <span class="op">=</span> model.make_future_dataframe(periods<span class="op">=</span>sizetest, freq<span class="op">=</span>frecuencia, include_history<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a>    forecast <span class="op">=</span> model.predict(future)</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">#########</span></span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a>    y_test <span class="op">=</span> test_df.y</span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a>    y_pred <span class="op">=</span> forecast[<span class="st">'yhat'</span>]</span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Asumiendo que y_test son los valores reales y y_pred son las predicciones del modelo</span></span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a>    mae <span class="op">=</span> mean_absolute_error(y_test, y_pred)</span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a>    mse <span class="op">=</span> mean_squared_error(y_test, y_pred)</span>
+<span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a>    rmse <span class="op">=</span> np.sqrt(mse)</span>
+<span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a>    r2 <span class="op">=</span> r2_score(y_test, y_pred)</span>
+<span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"MAE: </span><span class="sc">{</span>mae<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"MSE: </span><span class="sc">{</span>mse<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb27-37"><a href="#cb27-37" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"RMSE: </span><span class="sc">{</span>rmse<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb27-38"><a href="#cb27-38" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"R²: </span><span class="sc">{</span>r2<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb27-39"><a href="#cb27-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-40"><a href="#cb27-40" aria-hidden="true" tabindex="-1"></a>    <span class="co">###########</span></span>
+<span id="cb27-41"><a href="#cb27-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-42"><a href="#cb27-42" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Graficar los datos reales y las predicciones</span></span>
+<span id="cb27-43"><a href="#cb27-43" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb27-44"><a href="#cb27-44" aria-hidden="true" tabindex="-1"></a>    plt.plot(df_producto[<span class="st">'ds'</span>], df_producto[<span class="st">'y'</span>], label<span class="op">=</span><span class="st">'Datos reales'</span>, color<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb27-45"><a href="#cb27-45" aria-hidden="true" tabindex="-1"></a>    plt.plot(test_df[<span class="st">'ds'</span>], forecast[<span class="st">'yhat'</span>], label<span class="op">=</span><span class="st">'Predicción del entrenamiento'</span>, color<span class="op">=</span><span class="st">'green'</span>)</span>
+<span id="cb27-46"><a href="#cb27-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-47"><a href="#cb27-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Hacer predicciones para los siguientes 12 meses a partir de la fecha final del dataset</span></span>
+<span id="cb27-48"><a href="#cb27-48" aria-hidden="true" tabindex="-1"></a>    model2 <span class="op">=</span> Prophet(seasonality_prior_scale<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb27-49"><a href="#cb27-49" aria-hidden="true" tabindex="-1"></a>    model2.fit(df_producto)</span>
+<span id="cb27-50"><a href="#cb27-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-51"><a href="#cb27-51" aria-hidden="true" tabindex="-1"></a>    future_12_months <span class="op">=</span> model2.make_future_dataframe(periods<span class="op">=</span>periodos, freq<span class="op">=</span>frecuencia, include_history<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb27-52"><a href="#cb27-52" aria-hidden="true" tabindex="-1"></a>    forecast_12_months <span class="op">=</span> model2.predict(future_12_months)</span>
+<span id="cb27-53"><a href="#cb27-53" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb27-54"><a href="#cb27-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Graficar las predicciones para los siguientes 12 meses</span></span>
+<span id="cb27-55"><a href="#cb27-55" aria-hidden="true" tabindex="-1"></a>    plt.plot(forecast_12_months[<span class="st">'ds'</span>], forecast_12_months[<span class="st">'yhat'</span>], label<span class="op">=</span><span class="st">'Predicción para el siguiente año'</span>, color<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb27-56"><a href="#cb27-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-57"><a href="#cb27-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Configurar los elementos del gráfico</span></span>
+<span id="cb27-58"><a href="#cb27-58" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">''</span>)</span>
+<span id="cb27-59"><a href="#cb27-59" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb27-60"><a href="#cb27-60" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="ss">f'</span><span class="sc">{</span>producto<span class="sc">}</span><span class="ss">: Datos reales vs Predicciones'</span>)</span>
+<span id="cb27-61"><a href="#cb27-61" aria-hidden="true" tabindex="-1"></a>    plt.legend()</span>
+<span id="cb27-62"><a href="#cb27-62" aria-hidden="true" tabindex="-1"></a>    <span class="co">#plt.savefig(f'{producto}.png')</span></span>
+<span id="cb27-63"><a href="#cb27-63" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb27-64"><a href="#cb27-64" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(forecast_12_months[[<span class="st">'ds'</span>, <span class="st">'yhat'</span>]])</span>
+<span id="cb27-65"><a href="#cb27-65" aria-hidden="true" tabindex="-1"></a>    <span class="co">#forecast_12_months[['ds', 'yhat']].to_excel(f'{producto}.xlsx')</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="resultados-y-comunicación" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Resultados y comunicación</h1>
+<div class="cell" data-execution_count="21">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>producto <span class="op">=</span> <span class="st">'Petróleo Crudo'</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>frecuencia <span class="op">=</span> <span class="st">'Q'</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>inicio <span class="op">=</span> <span class="st">'2015'</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>tamano_prueba <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>periodos <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>generar_modelo(producto, frecuencia, inicio, tamano_prueba, periodos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>17:27:34 - cmdstanpy - INFO - Chain [1] start processing
+17:27:34 - cmdstanpy - INFO - Chain [1] done processing
+17:27:34 - cmdstanpy - INFO - Chain [1] start processing</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MAE: 486738.74
+MSE: 419594396854.40
+RMSE: 647761.06
+R²: 0.32</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>17:27:34 - cmdstanpy - INFO - Chain [1] done processing</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="caso_exportaciones_files/figure-html/cell-22-output-4.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          ds         yhat
+0 2021-12-31 1,147,771.79
+1 2022-03-31 1,146,011.55
+2 2022-06-30   707,670.85
+3 2022-09-30 1,314,303.22</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="22">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>producto <span class="op">=</span> <span class="st">'Banano'</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>frecuencia <span class="op">=</span> <span class="st">'MS'</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>inicio <span class="op">=</span> <span class="st">'2001'</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>tamano_prueba <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>periodos <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>generar_modelo(producto, frecuencia, inicio, tamano_prueba, periodos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>17:27:34 - cmdstanpy - INFO - Chain [1] start processing
+17:27:34 - cmdstanpy - INFO - Chain [1] done processing
+17:27:35 - cmdstanpy - INFO - Chain [1] start processing
+17:27:35 - cmdstanpy - INFO - Chain [1] done processing</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MAE: 10145.59
+MSE: 140742978.40
+RMSE: 11863.51
+R²: 0.39</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="caso_exportaciones_files/figure-html/cell-23-output-3.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           ds      yhat
+0  2021-10-01 44,655.34
+1  2021-11-01 49,030.50
+2  2021-12-01 65,732.93
+3  2022-01-01 73,566.35
+4  2022-02-01 68,335.95
+5  2022-03-01 67,644.04
+6  2022-04-01 63,930.98
+7  2022-05-01 63,769.46
+8  2022-06-01 63,843.30
+9  2022-07-01 66,777.99
+10 2022-08-01 52,860.30
+11 2022-09-01 43,241.02</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="23">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>producto <span class="op">=</span> <span class="st">'Derivados De Petróleo'</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>frecuencia <span class="op">=</span> <span class="st">'MS'</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>inicio <span class="op">=</span> <span class="st">'2020'</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>tamano_prueba <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>periodos <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>generar_modelo(producto, frecuencia, inicio, tamano_prueba, periodos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>17:27:35 - cmdstanpy - INFO - Chain [1] start processing
+17:27:35 - cmdstanpy - INFO - Chain [1] done processing
+17:27:35 - cmdstanpy - INFO - Chain [1] start processing
+17:27:35 - cmdstanpy - INFO - Chain [1] done processing</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MAE: 46633.74
+MSE: 3123458739.73
+RMSE: 55887.91
+R²: 0.38</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="caso_exportaciones_files/figure-html/cell-24-output-3.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           ds       yhat
+0  2021-10-01 133,636.52
+1  2021-11-01 141,279.05
+2  2021-12-01 148,675.04
+3  2022-01-01 156,317.56
+4  2022-02-01 163,960.09
+5  2022-03-01 170,863.01
+6  2022-04-01 178,505.54
+7  2022-05-01 185,901.53
+8  2022-06-01 193,544.06
+9  2022-07-01 200,940.05
+10 2022-08-01 208,582.58
+11 2022-09-01 216,225.10</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="24">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>producto <span class="op">=</span> <span class="st">'Plátano'</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>frecuencia <span class="op">=</span> <span class="st">'MS'</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>inicio <span class="op">=</span> <span class="st">'2001'</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>tamano_prueba <span class="op">=</span> <span class="dv">24</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>periodos <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>generar_modelo(producto, frecuencia, inicio, tamano_prueba, periodos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>17:27:36 - cmdstanpy - INFO - Chain [1] start processing
+17:27:36 - cmdstanpy - INFO - Chain [1] done processing
+17:27:36 - cmdstanpy - INFO - Chain [1] start processing
+17:27:36 - cmdstanpy - INFO - Chain [1] done processing</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MAE: 1055.23
+MSE: 2185503.97
+RMSE: 1478.35
+R²: 0.38</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="caso_exportaciones_files/figure-html/cell-25-output-3.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           ds      yhat
+0  2021-10-01  9,918.68
+1  2021-11-01  9,870.96
+2  2021-12-01 11,331.34
+3  2022-01-01 12,010.97
+4  2022-02-01 11,614.23
+5  2022-03-01 13,337.83
+6  2022-04-01 12,060.37
+7  2022-05-01 11,794.67
+8  2022-06-01 10,980.66
+9  2022-07-01 10,600.39
+10 2022-08-01 10,022.96
+11 2022-09-01  9,731.21</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="25">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>producto <span class="op">=</span> <span class="st">'Camarones'</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>frecuencia <span class="op">=</span> <span class="st">'M'</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>inicio <span class="op">=</span> <span class="st">'2019'</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>tamano_prueba <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>periodos <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>generar_modelo(producto, frecuencia, inicio, tamano_prueba, periodos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>17:27:36 - cmdstanpy - INFO - Chain [1] start processing
+17:27:37 - cmdstanpy - INFO - Chain [1] done processing
+17:27:37 - cmdstanpy - INFO - Chain [1] start processing</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MAE: 2321.13
+MSE: 8163479.85
+RMSE: 2857.18
+R²: 0.32</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>17:27:37 - cmdstanpy - INFO - Chain [1] done processing</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="caso_exportaciones_files/figure-html/cell-26-output-4.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           ds      yhat
+0  2021-10-31 13,711.40
+1  2021-11-30 13,339.75
+2  2021-12-31 14,166.41
+3  2022-01-31 16,751.51
+4  2022-02-28 16,335.40
+5  2022-03-31 17,805.29
+6  2022-04-30 17,750.83
+7  2022-05-31 21,447.06
+8  2022-06-30 19,877.97
+9  2022-07-31 20,531.44
+10 2022-08-31 20,496.65
+11 2022-09-30 18,379.33</code></pre>
+</div>
+</div>
+</section>
+<section id="afinamiento-de-hiperparámetros" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Afinamiento de hiperparámetros</h1>
+<section id="incorporación-del-regresor-precio-y-ajuste-de-la-frecuencia-de-los-datos" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="incorporación-del-regresor-precio-y-ajuste-de-la-frecuencia-de-los-datos"><span class="header-section-number">10.1</span> Incorporación del regresor <code>precio</code> y ajuste de la frecuencia de los datos</h2>
+<div class="cell" data-execution_count="26">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generar_modelo_regresor(producto, frecuencia<span class="op">=</span><span class="st">'M'</span>, inicio<span class="op">=</span><span class="va">None</span>, sizetest<span class="op">=</span><span class="dv">12</span>, periodos<span class="op">=</span><span class="dv">12</span>):</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Crear el dataframe</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>    dfa <span class="op">=</span> df.reset_index().groupby([pd.Grouper(key<span class="op">=</span><span class="st">'Fecha'</span>, freq<span class="op">=</span>frecuencia), </span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>                              <span class="st">'Producto Principal (Nivel 4)'</span>, <span class="st">'Tradicional/No tradicional'</span>, <span class="st">'No Petrolero/Petrolero'</span>]).<span class="bu">sum</span>().reset_index(level<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>])</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>    df_producto <span class="op">=</span> (dfa[(dfa[<span class="st">'Producto Principal (Nivel 4)'</span>] <span class="op">==</span> producto)]</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>                         .resample(frecuencia)[[<span class="st">'Toneladas'</span>, <span class="st">'Precio Unitario'</span>]].<span class="bu">sum</span>())[inicio:].reset_index()</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Renombrando las columnas</span></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>    df_producto.rename(columns<span class="op">=</span>{<span class="st">'Fecha'</span>: <span class="st">'ds'</span>, <span class="st">'Toneladas'</span>: <span class="st">'y'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dividir los datos en entrenamiento y prueba</span></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>    train_df <span class="op">=</span> df_producto.iloc[:<span class="op">-</span>sizetest]  <span class="co"># Todos los datos excepto los últimos 12 meses</span></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>    test_df <span class="op">=</span> df_producto.iloc[<span class="op">-</span>sizetest:]   <span class="co"># Los últimos 12 meses</span></span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Entrenar el modelo Prophet con los datos de entrenamiento</span></span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> Prophet(seasonality_prior_scale<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a>    model.add_regressor(<span class="st">'Precio Unitario'</span>)</span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a>    model.fit(train_df)</span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Realizar predicciones para el período de prueba</span></span>
+<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a>    future <span class="op">=</span> model.make_future_dataframe(periods<span class="op">=</span>sizetest <span class="op">+</span> periodos, freq<span class="op">=</span>frecuencia, include_history<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a>    future[<span class="st">'Precio Unitario'</span>] <span class="op">=</span> df_producto[<span class="st">'Precio Unitario'</span>].iloc[<span class="op">-</span>(sizetest <span class="op">+</span> periodos):].values</span>
+<span id="cb50-24"><a href="#cb50-24" aria-hidden="true" tabindex="-1"></a>    forecast <span class="op">=</span> model.predict(future)</span>
+<span id="cb50-25"><a href="#cb50-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-26"><a href="#cb50-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calcular métricas de error</span></span>
+<span id="cb50-27"><a href="#cb50-27" aria-hidden="true" tabindex="-1"></a>    y_test <span class="op">=</span> test_df.y</span>
+<span id="cb50-28"><a href="#cb50-28" aria-hidden="true" tabindex="-1"></a>    y_pred <span class="op">=</span> forecast[<span class="st">'yhat'</span>][:sizetest]</span>
+<span id="cb50-29"><a href="#cb50-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-30"><a href="#cb50-30" aria-hidden="true" tabindex="-1"></a>    mae <span class="op">=</span> mean_absolute_error(y_test, y_pred)</span>
+<span id="cb50-31"><a href="#cb50-31" aria-hidden="true" tabindex="-1"></a>    mse <span class="op">=</span> mean_squared_error(y_test, y_pred)</span>
+<span id="cb50-32"><a href="#cb50-32" aria-hidden="true" tabindex="-1"></a>    rmse <span class="op">=</span> np.sqrt(mse)</span>
+<span id="cb50-33"><a href="#cb50-33" aria-hidden="true" tabindex="-1"></a>    r2 <span class="op">=</span> r2_score(y_test, y_pred)</span>
+<span id="cb50-34"><a href="#cb50-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-35"><a href="#cb50-35" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"MAE: </span><span class="sc">{</span>mae<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb50-36"><a href="#cb50-36" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"MSE: </span><span class="sc">{</span>mse<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb50-37"><a href="#cb50-37" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"RMSE: </span><span class="sc">{</span>rmse<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb50-38"><a href="#cb50-38" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"R²: </span><span class="sc">{</span>r2<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb50-39"><a href="#cb50-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-40"><a href="#cb50-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Graficar los datos reales y las predicciones</span></span>
+<span id="cb50-41"><a href="#cb50-41" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb50-42"><a href="#cb50-42" aria-hidden="true" tabindex="-1"></a>    plt.plot(df_producto[<span class="st">'ds'</span>], df_producto[<span class="st">'y'</span>], label<span class="op">=</span><span class="st">'Datos reales'</span>, color<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb50-43"><a href="#cb50-43" aria-hidden="true" tabindex="-1"></a>    plt.plot(test_df[<span class="st">'ds'</span>], y_pred, label<span class="op">=</span><span class="st">'Predicción del entrenamiento'</span>, color<span class="op">=</span><span class="st">'green'</span>)</span>
+<span id="cb50-44"><a href="#cb50-44" aria-hidden="true" tabindex="-1"></a>    plt.plot(forecast[<span class="st">'ds'</span>][sizetest:], forecast[<span class="st">'yhat'</span>][sizetest:], label<span class="op">=</span><span class="st">'Predicción para el siguiente año'</span>, color<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb50-45"><a href="#cb50-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-46"><a href="#cb50-46" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">''</span>)</span>
+<span id="cb50-47"><a href="#cb50-47" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">'Toneladas'</span>)</span>
+<span id="cb50-48"><a href="#cb50-48" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="ss">f'</span><span class="sc">{</span>producto<span class="sc">}</span><span class="ss">: Datos reales vs Predicciones'</span>)</span>
+<span id="cb50-49"><a href="#cb50-49" aria-hidden="true" tabindex="-1"></a>    plt.legend()</span>
+<span id="cb50-50"><a href="#cb50-50" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="57">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>producto <span class="op">=</span> <span class="st">'Camarones'</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>frecuencia <span class="op">=</span> <span class="st">'W'</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>inicio <span class="op">=</span> <span class="st">'2019'</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>tamano_prueba <span class="op">=</span> <span class="dv">24</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>periodos <span class="op">=</span> <span class="dv">52</span></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>generar_modelo_regresor(producto, frecuencia, inicio, tamano_prueba, periodos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>17:45:12 - cmdstanpy - INFO - Chain [1] start processing
+17:45:12 - cmdstanpy - INFO - Chain [1] done processing</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MAE: 1641.69
+MSE: 10129899.00
+RMSE: 3182.75
+R²: 0.81</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="caso_exportaciones_files/figure-html/cell-28-output-3.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="55">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>producto <span class="op">=</span> <span class="st">'Plátano'</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>frecuencia <span class="op">=</span> <span class="st">'W'</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>inicio <span class="op">=</span> <span class="st">'2017'</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>tamano_prueba <span class="op">=</span> <span class="dv">24</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>periodos <span class="op">=</span> <span class="dv">52</span></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>generar_modelo_regresor(producto, frecuencia, inicio, tamano_prueba, periodos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>17:34:00 - cmdstanpy - INFO - Chain [1] start processing
+17:34:00 - cmdstanpy - INFO - Chain [1] done processing</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MAE: 981.25
+MSE: 1954868.12
+RMSE: 1398.17
+R²: 0.90</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="caso_exportaciones_files/figure-html/cell-29-output-3.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="56">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>producto <span class="op">=</span> <span class="st">'Banano'</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>frecuencia <span class="op">=</span> <span class="st">'W'</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>inicio <span class="op">=</span> <span class="st">'2017'</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>tamano_prueba <span class="op">=</span> <span class="dv">24</span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>periodos <span class="op">=</span> <span class="dv">52</span></span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>generar_modelo_regresor(producto, frecuencia, inicio, tamano_prueba, periodos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>17:34:09 - cmdstanpy - INFO - Chain [1] start processing
+17:34:09 - cmdstanpy - INFO - Chain [1] done processing</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MAE: 6611.37
+MSE: 68131515.24
+RMSE: 8254.18
+R²: 0.87</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="caso_exportaciones_files/figure-html/cell-30-output-3.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="conclusiones" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Conclusiones</h1>
+<p>Un coeficiente de determinación (R²) de 0.38 indica que aproximadamente el 38% de la variabilidad en los datos de exportación de los productos puede ser explicada por el modelo. En otras palabras, los modelos pueden explicar una parte de la variación en las exportaciones, pero no la mayoría de ella. Un R² de 0.38 puede considerarse relativamente bajo en algunos contextos, lo que sugiere que los modelo podrían no ser lo suficientemente precisos para hacer predicciones muy confiables. Sin embargo, la calidad de un R² depende del campo de estudio y del problema en cuestión. En algunos casos, un R² de 0.38 podría ser aceptable, especialmente si no hay muchos datos disponibles o si los datos son muy ruidosos.</p>
+<p>Los modelos de los productos no petroleros, mejoraron significativamente al incluir la variable <code>Precio Unitario</code> y cambiar la frecuencia a <code>Semanal</code>.</p>
+<dl>
+<dt>Inclusión del precio unitario como regresor</dt>
+<dd>
+Al agregar una variable adicional al modelo, se proporciona información adicional que puede ayudar a explicar la variabilidad en los datos. En este caso, el precio unitario puede estar relacionado con las exportaciones y al incluirlo como regresor, el modelo puede capturar mejor la relación entre las variables. Esto puede mejorar significativamente la precisión de las predicciones.
+</dd>
+<dt>Cambio de frecuencia de mensual a semanal</dt>
+<dd>
+Al cambiar la frecuencia de los datos de mensual a semanal, se proporciona más puntos de datos al modelo, lo que puede ayudar a capturar mejor las tendencias y patrones en los datos. Además, al aumentar la granularidad de los datos, es posible que ahora se esté capturando información estacional o de tendencia que antes no era evidente a nivel mensual. Esto también puede contribuir a la mejora en el rendimiento del modelo.
+</dd>
+</dl>
+</section>
+<section id="recomendaciones" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Recomendaciones</h1>
+<p>Para mejorar el modelo de predicción de exportaciones se podría intentar lo siguiente:</p>
+<ul>
+<li><p><strong>Incluir más variables</strong>: Si hay otras variables relevantes que puedan afectar las exportaciones, como datos económicos, factores políticos, precios de productos relacionados, entre otros, probar incluirlos en el modelo para ver si mejora su precisión.</p></li>
+<li><p><strong>Incorporar información de retrasos temporales</strong>: Algunos modelos de series de tiempo, como ARIMA o modelos de vectores autorregresivos (VAR), utilizan información de retrasos temporales (lag) para capturar la dependencia temporal en los datos. Incorporar estos retrasos podría mejorar la precisión del modelo.</p></li>
+<li><p><strong>Probar diferentes técnicas de modelado</strong>: No todos los modelos funcionan igual de bien para cada conjunto de datos. Prueba con diferentes técnicas de modelado, como modelos de regresión, ARIMA, modelos de estado-espacio, entre otros, para ver cuál funciona mejor en el problema específico.</p></li>
+<li><p><strong>Validación cruzada</strong>: Utilizar validación cruzada para evaluar el rendimiento del modelo en diferentes conjuntos de datos de entrenamiento y prueba. Esto ayudará a comprender cómo de generalizable es el modelo y si es probable que funcione bien en datos futuros no vistos.</p></li>
+<li><p><strong>Sintonizar hiperparámetros</strong>: Algunos modelos, como Prophet o modelos basados en machine learning, tienen hiperparámetros que pueden afectar su rendimiento. Realizar una búsqueda en el espacio de hiperparámetros para encontrar la mejor combinación que mejore la precisión del modelo.</p></li>
+<li><p><strong>Analizar residuos</strong>: Examinar los residuos del modelo (errores de predicción) para verificar si hay patrones no capturados por el modelo. Si se encuentra patrones en los residuos, podría ser una señal de que el modelo no está capturando toda la información disponible en los datos.</p></li>
+</ul>
+<p>Mejorar un modelo de predicción puede ser un proceso iterativo y es posible que se tenga que probar varias sugerencias o combinarlas para lograr una mejora significativa en el rendimiento del modelo.</p>
+</section>
+<section id="referencias" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Referencias</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-atwan2022time" class="csl-entry" role="doc-biblioentry">
+Atwan, T. A. 2022. <em>Time Series Analysis with Python Cookbook: Practical Recipes for Exploratory Data Analysis, Data Preparation, Forecasting, and Model Evaluation</em>. Packt Publishing, Limited. <a href="https://books.google.com.ec/books?id=MmE6zwEACAAJ">https://books.google.com.ec/books?id=MmE6zwEACAAJ</a>.
+</div>
+<div id="ref-chapman2000crisp" class="csl-entry" role="doc-biblioentry">
+Chapman, P. 2000. <em>CRISP-DM 1.0: Step-by-step Data Mining Guide</em>. SPSS. <a href="https://books.google.com.ec/books?id=po7FtgAACAAJ">https://books.google.com.ec/books?id=po7FtgAACAAJ</a>.
+</div>
+<div id="ref-hyndman2018forecasting" class="csl-entry" role="doc-biblioentry">
+Hyndman, R. J., y G. Athanasopoulos. 2018. <em>Forecasting: principles and practice</em>. OTexts. <a href="https://books.google.com.ec/books?id=\_bBhDwAAQBAJ">https://books.google.com.ec/books?id=\_bBhDwAAQBAJ</a>.
+</div>
+<div id="ref-peixeiro2022time" class="csl-entry" role="doc-biblioentry">
+Peixeiro, M. 2022. <em>Time Series Forecasting in Python</em>. Manning. <a href="https://books.google.com.ec/books?id=4H6HEAAAQBAJ">https://books.google.com.ec/books?id=4H6HEAAAQBAJ</a>.
+</div>
+<div id="ref-vishwas2020hands" class="csl-entry" role="doc-biblioentry">
+Vishwas, B. V., y A. PATEL. 2020. <em>Hands-on Time Series Analysis with Python: From Basics to Bleeding Edge Techniques</em>. Apress. <a href="https://books.google.com.ec/books?id=cTeHzQEACAAJ">https://books.google.com.ec/books?id=cTeHzQEACAAJ</a>.
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
